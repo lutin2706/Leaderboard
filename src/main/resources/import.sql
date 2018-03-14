@@ -1,0 +1,6 @@
+INSERT INTO Country(name) VALUES ('Belgium'),('France'),('China')
+INSERT INTO Player(nick_name, country_id) VALUES ('Simona', (SELECT id FROM Country WHERE name='Belgium')),('Alam', (SELECT id FROM Country WHERE name='Belgium')),('Séverine', (SELECT id FROM Country WHERE name='Belgium'))
+INSERT INTO Type(title) VALUES ('arcade'), ('racing'), ('puzzle')
+INSERT INTO Game(name, type_id) VALUES ('Super Mario', 1), ('Pac Man', 1), ('Gran turismo', 2), ('World of Goo', 3)
+INSERT INTO Achievement(points, name, game_id, player_id) VALUES (1000, 'silver', 1, 1), (50,'beginner', 2, 2)
+INSERT INTO player_friends(player_id, friends_id) VALUES (1,2)
